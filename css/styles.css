@@ -327,16 +327,12 @@ main {
 }
 
 main section.leaderboard {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important;
-  grid-template-rows: repeat(5, auto) !important;
-  gap: 2rem 4rem !important;
-  width: 100% !important;
-  max-width: 1200px !important;
-  margin: 0 auto !important;
-  padding: 0 !important;
-  justify-content: center !important;
-  align-items: center !important;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 4rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .startup-card {
@@ -1129,6 +1125,59 @@ main {
 /* Add this to your existing CSS */
 video:hover {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text x="0" y="20">😎</text></svg>'), auto;
+}
+
+/* Style for clickable startup content */
+.startup-card a.startup-content {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    gap: 1.5rem;
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='48' viewport='0 0 100 100' style='fill:black;font-size:24px;'><text y='50%'>🦄</text></svg>") 16 0, auto;
+}
+
+.startup-card a.startup-content:hover {
+    transform: scale(1.02);
+}
+
+/* Grid layout for startup cards */
+main section.leaderboard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Card content layout */
+.startup-card .startup-content,
+.startup-card a.startup-content {
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Fixed width for logo column */
+    align-items: center;
+    width: 100%;
+    min-height: 100px;
+    padding: 1.5rem;
+}
+
+/* Logo styling */
+.company-logo {
+    width: auto;
+    height: 40px;
+    justify-self: end; /* Align logo to the right side of its column */
+    margin-right: 2rem; /* Space between logo and company name */
+}
+
+/* Company name styling */
+.startup-content h3 {
+    justify-self: start; /* Align text to the left side of its column */
+    margin: 0;
 }
 
 
