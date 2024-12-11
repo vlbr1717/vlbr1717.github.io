@@ -330,9 +330,17 @@ main section.leaderboard {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem 4rem;
-  width: 100%;
-  max-width: 1200px;
+  padding: 0;
+  max-width: 1100px;
   margin: 0 auto;
+  width: 100%;
+}
+
+/* Optional: if you want a small margin from the edge of the screen on mobile */
+@media (max-width: 768px) {
+  .leaderboard {
+    padding: 0 1rem;
+  }
 }
 
 .startup-card {
@@ -838,9 +846,10 @@ main {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 4rem;
-    padding: 2rem;
-    max-width: 1200px;
+    padding: 0;
+    max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .startup-card {
@@ -898,9 +907,10 @@ section.leaderboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 4rem;
-    padding: 2rem;
-    max-width: 1200px;
+    padding: 0;
+    max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .startup-card {
@@ -1150,9 +1160,10 @@ main section.leaderboard {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem 4rem;
-    width: 100%;
+    padding: 0;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* Card content layout */
