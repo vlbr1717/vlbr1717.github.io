@@ -4,14 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
   const pitch = document.getElementById('pitch');
   const wordCount = document.getElementById('wordCount');
 
-  // Add this at the beginning of your script
-  const particlesContainer = document.querySelector('.particles');
-  for (let i = 0; i < 50; i++) {
-      const particle = document.createElement('div');
-      particle.className = 'particle';
-      particlesContainer.appendChild(particle);
-  }
-
   // Word count
   pitch.addEventListener('input', function() {
       const words = pitch.value.trim().split(/\s+/).filter(word => word.length > 0);
