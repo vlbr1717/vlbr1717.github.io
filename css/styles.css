@@ -28,7 +28,7 @@ body {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   opacity: 0;
-  animation: fadeIn 1.8s ease-out forwards;
+  animation: fadeIn 3s ease-out forwards;
 }
 
 /* Floating particles */
@@ -282,8 +282,8 @@ header {
   background: transparent;
   border-bottom: none;
   opacity: 0;
-  animation: slideInTop 1.2s ease-out forwards;
-  animation-delay: 1.5s;
+  animation: slideInTop 2s ease-out forwards;
+  animation-delay: 2.5s;
 }
 
 @keyframes float {
@@ -322,8 +322,8 @@ main {
   position: relative;
   z-index: 2;
   opacity: 0;
-  animation: scaleIn 1.2s ease-out forwards;
-  animation-delay: 2s;
+  animation: scaleIn 2s ease-out forwards;
+  animation-delay: 3.5s;
 }
 
 main section.leaderboard {
@@ -351,7 +351,7 @@ main section.leaderboard {
   width: 100%;
   box-sizing: border-box;
   opacity: 0;
-  animation: scaleIn 0.6s ease-out forwards;
+  animation: scaleIn 1s ease-out forwards;
 }
 
 .startup-card:hover {
@@ -1084,31 +1084,31 @@ section.leaderboard {
 /* Animation classes */
 .background {
     opacity: 0;
-    animation: fadeIn 1.8s ease-out forwards;
+    animation: fadeIn 3s ease-out forwards;
 }
 
 header {
     opacity: 0;
-    animation: slideInTop 1.2s ease-out forwards;
-    animation-delay: 1.5s;
+    animation: slideInTop 2s ease-out forwards;
+    animation-delay: 2.5s;
 }
 
 main {
     opacity: 0;
-    animation: scaleIn 1.2s ease-out forwards;
-    animation-delay: 2s;
+    animation: scaleIn 2s ease-out forwards;
+    animation-delay: 3.5s;
 }
 
 /* Startup card animations */
 .startup-card {
     opacity: 0;
-    animation: scaleIn 0.6s ease-out forwards;
+    animation: scaleIn 1s ease-out forwards;
 }
 
-/* Faster staggered delays for startup cards */
+/* Slower staggered delays for startup cards */
 @for $i from 1 through 10 {
     .startup-card:nth-child(#{$i}) {
-        animation-delay: #{2 + ($i * 0.15)}s;
+        animation-delay: #{3.5 + ($i * 0.25)}s;
     }
 }
 
@@ -1125,4 +1125,10 @@ main {
 * {
     backface-visibility: hidden;
 }
+
+/* Add this to your existing CSS */
+video:hover {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><text x="0" y="20">😎</text></svg>'), auto;
+}
+
 
